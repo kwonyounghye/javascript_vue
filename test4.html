@@ -1,0 +1,23 @@
+<body style="text-align:center">
+	<h1 style="color: green">
+		Geeksforgeeks
+	</h1>
+	<h3>
+		Adding object in array
+	</h3>
+	<p>Click the button to add new elements to the array.</p>
+
+	<button onclick="unshiftFunction()">Add elements</button>
+
+	<p id="geeks"></p>
+
+	<script>
+		var list = ["Geeks", "Contribute", "Explore"];
+		document.getElementById("geeks").innerHTML = list;
+		
+		function unshiftFunction() {
+			list.unshift("for", "Geeks", );
+			document.getElementById("geeks").innerHTML = list;
+		}
+	</script>
+</body>

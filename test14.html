@@ -1,0 +1,44 @@
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<h1 style="color: green">
+	GeeksforGeeks
+</h1>
+
+<p id="GFG_UP">
+</p>
+
+<button onclick="gfg_Run()">
+	Click Here
+</button>
+
+<p id="GFG_DOWN">
+</p>
+
+<script>
+	var el_up = document.getElementById("GFG_UP");
+	
+	var el_down = document.getElementById("GFG_DOWN");
+	
+	el_up.innerHTML = "Click on the button to get "
+				+ "the all methods of any Object.";
+	
+	function Obj() {
+		this.m1 = function M1() {
+			return "From M1";
+		}
+		this.m2 = function M2() {
+			return "From M2";
+		}
+	}
+	
+	function getAllMethods(obj = this) {
+		return Object.keys(obj)
+			.filter((key) => typeof obj[key] === 'function')
+			.map((key) => obj[key]);
+	}
+	
+	function gfg_Run() {
+		el_down.innerHTML = getAllMethods(new Obj());
+	}
+</script>

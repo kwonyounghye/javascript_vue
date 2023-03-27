@@ -1,0 +1,41 @@
+<h1 style="color:green;">
+    GeeksforGeeks
+</h1>
+  
+<p id="GFG_UP1">
+</p>
+  
+<p id="GFG_UP2">
+</p>
+  
+<button onclick="GFG_Fun()">
+    click here
+</button>
+  
+<p id="GFG_DOWN">
+</p>
+  
+<script>
+    var up1 = document.getElementById('GFG_UP1');
+    var up2 = document.getElementById('GFG_UP2');
+    var down = document.getElementById('GFG_DOWN');
+      
+    var Obj = {
+        "1_prop": "1_Val",
+        "2_prop": "2_Val",
+        "3_prop": "3_Val"
+    };
+      
+    up1.innerHTML = "Click on the button to get"
+            + "the last element of the Object.";
+      
+    up2.innerHTML = JSON.stringify(Obj);
+      
+    function GFG_Fun() {
+        down.innerHTML = "The last key = '" +
+            Object.keys(Obj)[Object.keys(Obj).length-1]
+            + "' <br> Value = '"
+            + Obj[Object.keys(Obj)[Object.keys(Obj).length-1]]
+            + "'";
+    }
+</script>

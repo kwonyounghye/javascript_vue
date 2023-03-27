@@ -1,0 +1,22 @@
+<h1 style="color:green;">
+	GeeksforGeeks
+</h1>
+<p id="demo">person1 is 50 years old.</p>
+
+<button onClick="fun()">
+	click
+</button>
+
+<script>
+	function fun(){
+	let p = {
+		name: "person1",
+		age:50,
+		address:"address1"
+	};
+	
+	delete p.age;
+	document.getElementById("demo")
+			.innerHTML = p.name + " is " + p.age + " years old. ";
+	}
+</script>

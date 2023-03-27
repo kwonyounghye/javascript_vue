@@ -1,0 +1,62 @@
+<h1 style="color: green;">
+	GeeksforGeeks
+</h1>
+<h3>How to check whether an object is
+	created by Object constructor or not</h3>
+<p>Click on the button to run all test cases</p>
+
+<p>Test Case 1: {}</p>
+
+<p>Created by Object constructor:
+	<span id="testcase1"></span>
+</p>
+<p>Test Case 2: new Object</p>
+
+<p>Created by Object constructor:
+	<span id="testcase2"></span>
+</p>
+
+<p>Test Case 3: new Object()</p>
+
+<p>Created by Object constructor:
+	<span id="testcase3"></span>
+</p>
+
+<p>Test Case 4: []</p>
+
+<p>Created by Object constructor:
+	<span id="testcase4"></span>
+</p>
+
+<p>Test Case 5: "GeeksforGeeks"</p>
+
+<p>Created by Object constructor:
+	<span id="testcase5"></span>
+</p>
+
+
+<button onclick="executeTestCases()">Run</button>
+<script>
+	// Function to check if created by
+	// Object constructor
+	function checkCreatedByObjectConstructor(obj) {
+	return obj.constructor === Object ? true : false
+	}
+	
+	function executeTestCases() {
+	document.getElementById("testcase1").textContent =
+		checkCreatedByObjectConstructor({});
+	
+	document.getElementById("testcase2").textContent =
+		checkCreatedByObjectConstructor(new Object);
+	
+	document.getElementById("testcase3").textContent =
+		checkCreatedByObjectConstructor(new Object());
+	
+	document.getElementById("testcase4").textContent =
+		checkCreatedByObjectConstructor([]);
+	
+	document.getElementById("testcase5").textContent =
+		checkCreatedByObjectConstructor("GeeksforGeeks");
+	}
+</script>

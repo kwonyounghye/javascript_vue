@@ -1,0 +1,23 @@
+<h1 style="color:green;">
+	GeeksForGeeks
+</h1>
+<p id="GFG_UP">
+</p>
+<button onClick="GFG_Fun()">
+	click here
+</button>
+<p id="GFG_DOWN">
+</p>
+<script>
+	var up = document.getElementById('GFG_UP');
+	var down = document.getElementById('GFG_DOWN');
+	var search = 'https://www.geeksforgeeks.org/?param_1=val_1&x=7&y=9';
+	up.innerHTML = search;
+	search = search.split('?')[1];
+	
+	function GFG_Fun() {
+		down.innerHTML = '{"' + decodeURI(search)
+		.replace(/"/g, '\\"').replace(/&/g, '","')
+		.replace(/=/g, '":"') + '"}';
+	}
+</script>

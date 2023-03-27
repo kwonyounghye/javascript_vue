@@ -1,0 +1,43 @@
+<body>
+	<h1 style="color: green">
+		GeeksforGeeks
+	</h1>
+	
+	<b>
+		How to remove duplicates
+		from an array of objects?
+	</b>
+	
+	<p>
+		Click on the button to remove
+		the duplicated in the array
+	</p>
+	
+	<p>Check the console for the output</p>
+	
+	<button onclick="removeDuplicates()">
+		Click here
+	</button>
+	
+	<script type="text/javascript">
+		function removeDuplicates() {
+			
+			// Create an array of objects
+			books = [
+				{ title: "C++", author: "Bjarne" },
+				{ title: "Java", author: "James" },
+				{ title: "Python", author: "Guido" },
+				{ title: "Java", author: "James" },
+			];
+			
+			jsonObject = books.map(JSON.stringify);
+			
+			console.log(jsonObject);
+			
+			uniqueSet = new Set(jsonObject);
+			uniqueArray = Array.from(uniqueSet).map(JSON.parse);
+			
+			console.log(uniqueArray);
+		}
+	</script>
+</body>

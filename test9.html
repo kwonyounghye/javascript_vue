@@ -1,0 +1,20 @@
+<h1 style="color:green;">
+	GeeksforGeeks
+</h1>
+<p id="demo">the address of person1 is </p>
+
+<button onClick="fun()">click
+</button>
+
+<script>
+	function fun(){
+	let p = {
+		name: "person1",
+		age:50,
+		address:"address1"
+	};
+	delete p.address;
+	document.getElementById("demo").innerHTML =
+	"the address of "+ p.name +" is " + p.address;		
+	}
+</script>

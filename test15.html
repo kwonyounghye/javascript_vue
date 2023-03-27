@@ -1,0 +1,41 @@
+<h1 style="color: green">
+	GeeksforGeeks
+</h1>
+
+<b>
+	How to iterate over
+	a JavaScript object?
+</b>
+
+<p>
+	Click on the button to iterate
+	through the javascript object.
+</p>
+
+<p id="gfg">
+</p>
+
+<button onclick="iterateObject()">
+	Iterate Object
+</button>
+
+<script>
+	function iterateObject() {
+		let exampleObj = {
+			book: "Sherlock Holmes",
+			author: "Arthur Conan Doyle",
+			genre: "Mystery"
+		};
+		
+		for (let key in exampleObj) {
+			if (exampleObj.hasOwnProperty(key))
+			{
+				value = exampleObj[key];
+				document.getElementById("gfg").innerHTML += key +
+															": " +
+															value +
+															"<br> ";
+			}
+		}
+	}
+</script>

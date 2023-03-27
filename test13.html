@@ -1,0 +1,40 @@
+<h1 style="color:green;">
+	GeeksforGeeks
+</h1>
+<p id="GFG_UP"></p>
+<button onClick="GFG_Fun()">
+	click here
+</button>
+<p id="GFG_DOWN"></p>
+<script>
+	var up = document.getElementById('GFG_UP');
+	var arrayObj = [{
+		prop_1: 'val',
+		prop_2: 'val_12',
+		prop_3: 'val_13'
+	}, {
+		prop_1: 'val',
+		prop_2: 'val_22',
+		prop_3: 'val_23'
+	}];
+	var down = document.getElementById('GFG_DOWN');
+	up.innerHTML = JSON.stringify(arrayObj);
+	
+	function fun_2(array, attr, value) {
+		for (var i = 0; i < array.length; i += 1) {
+			if (array[i][attr] === value) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	function GFG_Fun() {
+		var prop = 'prop_2';
+		var val = 'val_22';
+	
+		down.innerHTML = "Index of prop = '" +
+			prop + "' val = '" + val +
+			"' is = " + fun_2(arrayObj, prop, val);
+	}
+</script>
